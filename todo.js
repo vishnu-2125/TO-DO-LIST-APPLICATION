@@ -6,9 +6,6 @@ let todoListArray=[
     {task:"want to meet balayya "},
 ]
 
-
-
-
 function display()
 {
     let refElem=document.getElementById("ref");
@@ -19,7 +16,7 @@ function display()
             <tr>
                 <td>${todoListArray[ind].task}</td>
                 <td>
-                    <button onclick="deleteTask(${ind});">Delete</button>
+                    <button type="button" class="btn btn-primary"onclick="deleteTask(${ind});">Delete</button>
                 </td>
                 <td>
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="editTask(${ind});">Edit</button>
@@ -39,15 +36,10 @@ function display()
 
 
 display();
-
-
-
-
 function deleteTask(index){
     todoListArray.splice(index,1);
     display();
 }
-
 
 function addTask()
 {
